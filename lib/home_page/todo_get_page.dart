@@ -1,4 +1,5 @@
 import 'package:daily_to_do/controller/controller_todo.dart';
+import 'package:daily_to_do/home_page/single_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,6 +19,14 @@ appBar: AppBar(
               children: List.generate(state?.length ?? 0, (index) {
                 final item = state![index];
                 return ListTile(
+                  onTap: (){
+
+                    controller.gettodos(item.id.toString());
+
+
+                    Get.to(()=>SingleView());
+                    print(item.id);
+                  },
                   title: Text("${item.title}"),
                   leading: Text("${item.id}"),
                   subtitle: Text("${item.completed}"),

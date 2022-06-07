@@ -7,21 +7,14 @@ class UpDateRemoteService {
   UpDateRemoteService(this.dio);
 
   Future<dynamic> postData(data) async {
-
-    try{
+    try {
       final response = await dio.put(
         url,
         data: data,
-        // options: Options(
-        //   headers: {'Content-type': 'application/json; charset=UTF-8'},
-        // ),
       );
-      return response.data ;
-
-    }
-    catch(error) {
+      return response.data;
+    } catch (error) {
       return error;
-
     }
   }
 }

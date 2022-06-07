@@ -1,3 +1,4 @@
+import 'package:daily_to_do/home_page/single_page.dart';
 import 'package:daily_to_do/home_page/todo_get_page.dart';
 import 'package:daily_to_do/home_page/todo_post_page.dart';
 import 'package:daily_to_do/home_page/update_page.dart';
@@ -47,6 +48,16 @@ class _HomePageState extends State<HomePage> {
               child: ElevatedButton(
                   onPressed: () {
                     Get.to( UpDateHomePage());
+                  }, child: const Text('Add My ToDo')),
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Container(
+              padding: const EdgeInsets.all(30.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Get.to( SingleView());
                   }, child: const Text('Add My ToDo')),
             ),
           ],
