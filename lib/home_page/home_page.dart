@@ -1,5 +1,6 @@
 import 'package:daily_to_do/home_page/todo_get_page.dart';
 import 'package:daily_to_do/home_page/todo_post_page.dart';
+import 'package:daily_to_do/home_page/update_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               child: ElevatedButton(
                 onPressed: () {
                   Get.to(const HomeView());
@@ -35,7 +36,17 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(30.0),
               child: ElevatedButton(
                   onPressed: () {
-                    Get.to(PostViewPage());
+                    Get.to(const PostViewPage());
+                  }, child: const Text('Add My ToDo')),
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Container(
+              padding: const EdgeInsets.all(30.0),
+              child: ElevatedButton(
+                  onPressed: () {
+                    Get.to( UpDateHomePage());
                   }, child: const Text('Add My ToDo')),
             ),
           ],
