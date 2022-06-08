@@ -17,7 +17,7 @@ class _UpDateHomePage extends State<UpDateHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Api Post'),
+          title: const Text('TextFiled Updated'),
         ),
         body: _controller.obx(
               (state) {
@@ -73,7 +73,7 @@ class _UpDateHomePage extends State<UpDateHomePage> {
                       MaterialButton(
                         color: Colors.black,
                         child: const Text(
-                          'Post',
+                          'Update TextFiled',
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,

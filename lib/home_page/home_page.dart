@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   Get.to(const HomeView());
                 },
-                child: const Text('Show Your Todo'),
+                child: const Text('Show Your Todo Get Post Put Delate'),
               ),
             ),
             const SizedBox(
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               child: ElevatedButton(
                   onPressed: () {
                     Get.to(const PostViewPage());
-                  }, child: const Text('Add My ToDo')),
+                  }, child: const Text('Post My ToDo')),
             ),
             const SizedBox(
               height: 15.0,
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               child: ElevatedButton(
                   onPressed: () {
                     Get.to( UpDateHomePage());
-                  }, child: const Text('Add My ToDo')),
+                  }, child: const Text('Update My Todo With TextField')),
             ),
             const SizedBox(
               height: 15.0,
