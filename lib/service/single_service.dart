@@ -1,13 +1,16 @@
 import 'package:daily_to_do/model/listTodo.dart';
 import 'package:daily_to_do/model/singleTo.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SingleRemoteService {
   final Dio _dio = Dio();
   final Dio dio;
+  static const String url = "https://jsonplaceholder.typicode.com/posts";
   SingleRemoteService(this.dio);
   Future<SingleTo?> getSinglePost(int id) async {
+
     final url = 'https://jsonplaceholder.typicode.com/posts/' +id.toString() ;
 
     // final url = baseUrl + '/posts/' + id.toString();
@@ -24,4 +27,10 @@ class SingleRemoteService {
     }
     return null;
   }
+
+
+
+
+
+
 }

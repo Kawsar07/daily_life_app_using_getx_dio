@@ -10,24 +10,32 @@ class SingleView extends StatelessWidget {
     final controller = Get.put(HomeController());
     return Scaffold(
         appBar: AppBar(
-          title: Text('Api Get'),
+          title: const Text('Api Get'),
           centerTitle: true,
         ),
         body: controller.obx(
           (state) {
             return ListTile(
-              title: IconButton(
-                icon: Icon(Icons.delete),
-                onPressed: () {},
+              title: Text("${controller.alldata['title']}"),
+              subtitle: IconButton(
+                icon: const Icon(Icons.delete),
+                onPressed: () {
+    controller.delateData(controller.alldata['id'].toString());
+     print(controller.alldata['id'].toString());
+                },
               ),
-              // title: Text("${state?.userId}"),
-              subtitle: Text("${controller.alldata['title']}"),
-              leading: IconButton(
-                icon: Icon(Icons.update),
-                onPressed: () {},
-              ),
+              trailing: IconButton(
+                icon: const Icon(Icons.edit),
+                onPressed: () {
 
-              // leading: Text("${state?.id}"),
+                },
+              ),
+              leading: Text(
+                "${controller.alldata['id']} ",
+                style: const TextStyle(
+                  fontSize: 35.0,
+                ),
+              ),
             );
           },
           onLoading: const Center(child: CircularProgressIndicator()),

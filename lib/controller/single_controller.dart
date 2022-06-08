@@ -37,20 +37,8 @@ class SingleController extends GetxController with StateMixin<SingleTo> {
       return error;
     }
   }
-  Future<dynamic> delateData(id) async {
-    var fullurl=url+id;
-    try {
-      final response1 = await _dio.delete(
-        fullurl,
 
-        // data: data,
-      );
-      print(response1);
-      return response1.data;
-    } catch (error) {
-      return error;
-    }
-  }
+
 
 
 
@@ -67,6 +55,7 @@ class SingleController extends GetxController with StateMixin<SingleTo> {
       change(null, status: RxStatus.error());
     }
   }
+
 
 
 

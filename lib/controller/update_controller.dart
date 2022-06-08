@@ -17,27 +17,11 @@ class HomeController extends GetxController with StateMixin<ListTodo> {
     change(null, status: RxStatus.success());
   }
 
-  // final a = 1;
-  // final b = 2;
-
-  //[
-  //"a":"1"
-  //"b":"2"
-  // ]
 
   final newMap = <String, dynamic>{};
 
   Future<void> getIn() async {
 
-    // newMap["a"] = 1;
-    // newMap["b"] = 2;
-    //
-    //
-    // debugPrint("${a}");
-    // debugPrint("${b}");
-
-
-    // final map =  addDataDoc;
     change(null, status: RxStatus.loading());
     try {
       var map = addDataDoc;

@@ -63,5 +63,18 @@ class HomeController extends GetxController with StateMixin<List<ListTodo>> {
   //   }
   // }
 
+  Future<dynamic> delateData(id) async {
 
+    var fullurl=url+id;
+    try {
+      final response1 = await _dio.delete(
+        fullurl,
+
+      );
+      print(response1);
+      return response1.data;
+    } catch (error) {
+      return error;
+    }
+  }
 }
