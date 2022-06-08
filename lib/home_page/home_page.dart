@@ -53,13 +53,13 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 15.0,
             ),
-            Container(
-              padding: const EdgeInsets.all(30.0),
-              child: ElevatedButton(
-                  onPressed: () {
-                    Get.to( SingleView());
-                  }, child: const Text('Add My ToDo')),
-            ),
+            // Container(
+            //   padding: const EdgeInsets.all(30.0),
+            //   child: ElevatedButton(
+            //       onPressed: () {
+            //         Get.to( SingleView());
+            //       }, child: const Text('Add My ToDo')),
+            // ),
           ],
         ),
       ),

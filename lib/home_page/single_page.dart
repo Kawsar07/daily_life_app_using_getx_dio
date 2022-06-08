@@ -27,7 +27,8 @@ class SingleView extends StatelessWidget {
               trailing: IconButton(
                 icon: const Icon(Icons.edit),
                 onPressed: () {
-
+                  controller.updateData(controller.alldata['title'].toString());
+                  print(controller.alldata['title'].toString());
                 },
               ),
               leading: Text(
